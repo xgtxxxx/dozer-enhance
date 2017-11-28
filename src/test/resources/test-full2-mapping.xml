@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+    <configuration>
+        <custom-converters>
+            <converter type="com.xgt.dozer.enhance.converter.LocalDateConverter">
+                <class-a>java.time.LocalDate</class-a>
+                <class-b>java.time.LocalDate</class-b>
+            </converter>
+            <converter type="com.xgt.dozer.enhance.converter.OptionalConverter">
+                <class-a>java.util.Optional</class-a>
+                <class-b>java.lang.Object</class-b>
+            </converter>
+        </custom-converters>
+    </configuration>
+    <mapping>
+        <class-a>com.xgt.dozer.enhance.bean.test4.Test4From</class-a>
+        <class-b>com.xgt.dozer.enhance.bean.test4.Test4To</class-b>
+        <field>
+            <a>attr3</a>
+            <b>attr3</b>
+        </field>
+    </mapping>
+</mappings>
